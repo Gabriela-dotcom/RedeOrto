@@ -1,4 +1,4 @@
-import 'package:google_sign_in/google_sign_in.dart';
+/*import 'package:google_sign_in/google_sign_in.dart';
 import '../models/user_model.dart';
 
 class LoginController {
@@ -17,4 +17,4 @@ class LoginController {
     print('Usuário do Google: ${googleUser.displayName}');
     // Adicione sua lógica de autenticação com Google aqui
   }
-}
+}*/

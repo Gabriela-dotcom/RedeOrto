@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:smile/control/view/CCadastro.dart';
-import 'package:smile/control/view/Pesquisa_tratamento.dart';
-import 'control/view/LLogin.dart';
+import 'package:smile/view/CCadastro.dart';
+import 'package:smile/view/Confirmacao_tratamento.dart';
+import 'package:smile/view/LLogin.dart';
+import 'package:smile/view/Pesquisa_tratamento.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,17 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Login(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Login(),
+        '/cadastro': (context) => Cadastro(),
+        '/home': (context) => PesquisaTratamento(),
+        '/controlemedidas': (context) => ConfirmacaoTratamento(
+              tratamento: '',
+              horario: '',
+              profissional: '',
+            ),
+      },
     );
   }
 }
