@@ -1,0 +1,124 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Cadastro de Rede Ortodontia',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: CadastroScreen(),
+    );
+  }
+}
+
+class CadastroScreen extends StatefulWidget {
+  @override
+  _CadastroScreenState createState() => _CadastroScreenState();
+}
+
+class _CadastroScreenState extends State<CadastroScreen> {
+  final _formKey = GlobalKey<FormState>();
+
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _clinicController = TextEditingController();
+  final TextEditingController _notesController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Cadastro de Rede Ortodontia'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              TextFormField(
+                controller: _nameController,
+                decoration: const InputDecoration(
+                  labelText: 'Nome',
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira o nome';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _emailController,
+                decoration: const InputDecoration(
+                  labelText: 'E-mail',
+                ),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira o e-mail';
+                  } else if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
+                    return 'Por favor, insira um e-mail válido';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _phoneController,
+                decoration: const InputDecoration(
+                  labelText: 'Telefone',
+                ),
+                keyboardType: TextInputType.phone,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira o telefone';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _clinicController,
+                decoration: const InputDecoration(
+                  labelText: 'Nome da Clínica',
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira o nome da clínica';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _notesController,
+                decoration: const InputDecoration(
+                  labelText: 'Notas',
+                ),
+                maxLines: 3,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState?.validate() ?? false) {
+                    // Processar os dados do formulário
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Processando Dados')),
+                    );
+                  }
+                },
+                child: Text('Cadastrar'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
