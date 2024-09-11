@@ -22,7 +22,7 @@ Para a criação do Slime foi utilizado a arquitetura MVC:
 
  # Banco de Dados
 
- ![Diagrama conceitual de banco de dados](docs/DiagramaConceitualredeorto.png)
+ ![Diagrama conceitual de banco de dados](docs/Conceitualodonto0.png)
  
   ' Tabela Paciente '
   **idPaciente** : identificador unico para o paciente
