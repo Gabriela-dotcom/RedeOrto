@@ -23,7 +23,7 @@
 
 # FUNCIONALIDADES
 
- <! -- Codigo para por imagens dentro da documentação -->
+ <!-- Codigo para por imagens dentro da documentação -->
  ![Diagrama de caso de uso](docs/DiagramaDeCasoDeUso1.png)
  
  Explicar as funcionalidades do aplicativo.
