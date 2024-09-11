@@ -6,7 +6,7 @@
 
   O Slime é um aplicativo móvel de saúde bucal desenvolvido com Flutter, projetado para facilitar a jornada ao dentista. Ele permite que os usuários escolham tratamentos com profissionais qualificados, além de verificar se há algum problema que precise de atenção. Com uma interface intuitiva, o app oferece descrições detalhadas de cada procedimento e uma breve introdução do profissional que cuidará de você. Além disso, você pode marcar e acompanhar seus horários de consulta, escolhendo o melhor dia e horário para sua conveniência.
 
- ![Saiba Mais](REDEORTO/docs/Introducao.md)
+ [Saiba Mais](docs/Introducao.md)
 
 # ARQUITETURA
  
@@ -19,12 +19,12 @@
  - **Control**: Pasta que realiza o processo de intermediação entre **Model** e **View**, sendo
  responsável pelo gerenciamento dos dados entre telas e banco de dados. 
  
- ![Saiba Mais](REDEORTO/docs/Arquitetura.md)
+ [Saiba Mais](docs/Arquitetura.md)
 
 # FUNCIONALIDADES
 
  <! -- Codigo para por imagens dentro da documentação -->
- [Diagrama de caso de uso](docs/DiagramaDeCasoDeUso1.png)
+ ![Diagrama de caso de uso](docs/DiagramaDeCasoDeUso1.png)
  
  Explicar as funcionalidades do aplicativo.
  
@@ -32,6 +32,6 @@
   - os usuários podem criar suas contas com as seguintes informações: nome, número, cidade,
   cpf, email, senha e idade.
 
-  ![Saiba Mais](REDEORTO/docs/Funcionalidade.md)
+  [Saiba Mais](docs/Funcionalidade.md)
 
    
